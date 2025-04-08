@@ -1,0 +1,102 @@
+/* Global Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    background: linear-gradient(to right, #1f2937, #111827);
+    min-height: 100vh;
+    min-width: 100vw;
+  }
+  
+  /* Form Container */
+  .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 64px); /* adjust for navbar */
+    padding: 40px 20px;
+  }
+  
+  /* Shared Form Card Style */
+  .login-form {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 40px;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 420px;
+    color: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: 0.3s ease;
+  }
+  
+  .login-form h2 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 24px;
+    color: #fff;
+  }
+  
+  /* Inputs */
+  .login-form input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.8);
+    color: #111;
+    font-size: 15px;
+    transition: box-shadow 0.3s;
+  }
+  
+  .login-form input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+  }
+  
+  /* Buttons */
+  .login-form button {
+    width: 100%;
+    padding: 14px;
+    background-color: #3b82f6;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .login-form button:hover {
+    background-color: #2563eb;
+  }
+  
+  /* Link Text */
+  .text-link {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 16px;
+    color: #d1d5db;
+  }
+  
+  .text-link .link {
+    color: #93c5fd;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .text-link .link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive */
+  @media screen and (max-width: 500px) {
+    .login-form {
+      padding: 30px 20px;
+    }
+  }
+  
