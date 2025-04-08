@@ -1,55 +1,48 @@
-⚡ Renewable Energy Projects App
+# ⚡ Renewable Energy Projects App
 
-A full-stack web application built with the MERN stack to browse renewable energy projects using data from the NREL API. It includes authentication, search, pagination, and a modern UI.
+A full-stack web application built with the **MERN stack** to browse renewable energy projects using data from the NREL API. It includes authentication, search, pagination, and a modern UI.
 
-🚀 Tech Stack
+---
 
-Frontend
+## 🚀 Tech Stack
 
-React (JavaScript)
+**Frontend**
 
-Vite
+- React (JavaScript)
+- Vite
+- React Router DOM
+- Axios
+- CSS (Custom, responsive)
 
-React Router DOM
+**Backend**
 
-Axios
+- Node.js
+- Express
+- MongoDB (via Mongoose)
+- JWT for authentication
+- bcrypt for password hashing
 
-CSS (Custom, responsive)
+**Data Source**
 
-Backend
+- [NREL Alt Fuel Stations API](https://developer.nrel.gov/docs/transportation/alt-fuel-stations-v1/)
 
-Node.js
+---
 
-Express
+## 📦 Features
 
-MongoDB (via Mongoose)
+- 🔐 User Authentication (Register & Login)
+- 🧠 JWT-based session management
+- 🌱 Project listing with data from NREL
+- 🔍 Search with debounce
+- 📄 Project detail view
+- 📚 Pagination
+- 🌈 Modern, responsive UI
 
-JWT for authentication
+---
 
-bcrypt for password hashing
+## 📂 Folder Structure
 
-Data Source
-
-NREL Alt Fuel Stations API
-
-📦 Features
-
-🔐 User Authentication (Register & Login)
-
-🧠 JWT-based session management
-
-🌱 Project listing with data from NREL
-
-🔍 Search with debounce
-
-📄 Project detail view
-
-📚 Pagination
-
-🌈 Modern, responsive UI
-
-📂 Folder Structure
-
+```
 Renewable/
 ├── backend/
 │   ├── controllers/
@@ -87,45 +80,72 @@ Renewable/
 │   │   │   └── ProjectDetail.jsx
 │   │   └── ProtectedRoute.jsx
 │   └── README.md
+```
 
-🔧 Setup Instructions
+---
 
-1. Clone the repo
+## 🔧 Setup Instructions
 
-git clone https://github.com/your-username/renewable-energy-app.git
-cd renewable-energy-app
+### 1. Clone the repo
 
-2. Backend Setup
+```bash
+git clone https://github.com/Akshit945/RenewableProject.git
+cd RenewableProject
+```
 
+### 2. Backend Setup
+
+```bash
 cd backend
 npm install
 
 # Create .env
 MONGO_URI=mongodb://localhost:27017/renewable-app
 JWT_SECRET=your_secret_key
+PORT=3000
 
 npm run dev
+```
 
-3. Frontend Setup
+### 3. Frontend Setup
 
+```bash
 cd ../Frontend
 npm install
 npm run dev
-
+```
 # Create .env
-VITE_API_URL=http://localhost:3000
+VITE_API_URL=[http://localhost:3000]http://localhost:3000
+ 
+Open [http://localhost:5173](http://localhost:5173) to view the frontend in Vite
 
-Open http://localhost:5173 to view the frontend in Vite
+---
 
-🔐 API Endpoints
+## 🔐 API Endpoints
 
-Auth
+### Auth
 
-POST /api/auth/register – Create a new user
+- `POST /api/auth/register` – Create a new user
+- `POST /api/auth/login` – Authenticate and receive JWT
 
-POST /api/auth/login – Authenticate and receive JWT
+### Projects
 
-Projects
+- `GET /api/projects` – Fetch NREL projects (secured)
 
-GET /api/projects – Fetch NREL projects (secured)
+---
+
+## 📸 Screenshots
+
+>  ![Project Page](image.png)
+>  !![Login Page](image-1.png)
+
+---
+
+## 🧠 Future Improvements
+
+- Infinite scroll
+- Light/dark mode toggle
+- Admin dashboard
+
+---
 
