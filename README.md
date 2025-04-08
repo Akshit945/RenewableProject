@@ -137,7 +137,9 @@ Open [http://localhost:5173](http://localhost:5173) to view the frontend in Vite
 ## 📸 Screenshots
 
 >  ![Project Page](image.png)
->  !![Login Page](image-1.png)
+>  !![Login Page](image.png)
+> <img width="1440" alt="image" src="https://github.com/user-attachments/assets/5cefea4b-ea6a-46c2-b2c7-757621357a1b" />
+
 
 ---
 
