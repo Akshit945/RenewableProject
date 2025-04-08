@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.get('/', authMiddleware, async (req, res) => {
   try {
-    const apiKey = '18eegpVw4Zrh7ZQdAjFNaGv7Ko966KFs6elyb3og'; // or move to .env
+    const apiKey = '18eegpVw4Zrh7ZQdAjFNaGv7Ko966KFs6elyb3og'; 
     const response = await axios.get(`https://developer.nrel.gov/api/alt-fuel-stations/v1.json?api_key=${apiKey}&country=US&limit=100`);
     res.json(response.data);
   } catch (err) {

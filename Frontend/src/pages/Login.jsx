@@ -32,6 +32,9 @@ console.log(`${BASE_URL}/api/auth/auth/login`);
 
       <form onSubmit={handleSubmit} className="login-form">
   <h2>Login</h2>
+  <p>If you dont want to register:</p>
+  <p>Email:testing@test.com</p>
+  <p>Password:test123</p>
   <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} required />
   <input type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} required />
   <button type="submit">Login</button>
