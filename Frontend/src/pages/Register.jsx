@@ -9,9 +9,12 @@ const Register = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [loading, setLoading] = useState(false);
+
   const navigate = useNavigate();
 
   const handleRegister = async (e) => {
+    setLoading(true);
     e.preventDefault();
     try {
       await axios.post(`${BASE_URL}/api/auth/register`, {
@@ -23,6 +26,9 @@ const Register = () => {
       navigate('/login');
     } catch (err) {
       alert('Registration failed. Email might already be in use.');
+    }
+    finally{
+      setLoading(false);
     }
   };
 
@@ -52,7 +58,13 @@ const Register = () => {
             onChange={(e) => setPassword(e.target.value)}
             required
           />
-          <button type="submit">Register</button>
+          <button type="submit">{
+            loading ? (
+              <div>Loading.....</div>
+            ) : (
+              'Register'
+            )
+          }</button>
 
         </form>
       </div>

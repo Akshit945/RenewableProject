@@ -9,17 +9,22 @@ const BASE_URL = import.meta.env.VITE_API_URL;
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 console.log(`${BASE_URL}/api/auth/auth/login`);
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault(); 
+    setLoading(true);
     try {
       const res = await axios.post(`${BASE_URL}/api/auth/login`, { email, password });
       setToken(res.data.token);
       navigate('/projects');
     } catch (err) {
       alert('Login failed');
+    }
+    finally{
+      setLoading(false);
     }
   };
 
@@ -37,7 +42,15 @@ console.log(`${BASE_URL}/api/auth/auth/login`);
   <p>Password:test123</p>
   <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} required />
   <input type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} required />
-  <button type="submit">Login</button>
+  <button type="submit">
+  {
+    loading ? (
+        <div className="loader">Loading.....</div>
+      ) : (
+        'Login'
+      )
+  }
+  </button>
 </form>
     </div>
     </div>
